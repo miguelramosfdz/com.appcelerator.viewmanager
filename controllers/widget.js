@@ -71,7 +71,7 @@ exports.back = function () {
         history.pop();
         _show();
     } else if (isAndroid && options.handleBackWin) {
-        modal.confirm("Are you sure?", function() {
+        modal.confirm("Are you sure you want to exit?", function() {
             options.handleBackWin.close();
         });
     }
