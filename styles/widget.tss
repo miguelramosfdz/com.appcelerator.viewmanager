@@ -1,0 +1,4 @@
+"View": {
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL
+}
