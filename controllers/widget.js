@@ -3,6 +3,8 @@ var current = -1;
 var available = [];
 var lastOpen = [];
 
+var modal = Alloy.createWidget("com.appcelerator.davidecassenti.modalwindow");
+
 var isAndroid = (Ti.Platform.osname == "android");
 
 var options = {
@@ -69,7 +71,9 @@ exports.back = function () {
         history.pop();
         _show();
     } else if (isAndroid && options.handleBackWin) {
-        options.handleBackWin.close();
+        modal.confirm("Are you sure?", function() {
+            options.handleBackWin.close();
+        });
     }
 };
 
