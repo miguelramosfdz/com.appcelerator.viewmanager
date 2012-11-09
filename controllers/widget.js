@@ -69,7 +69,7 @@ exports.back = function () {
         history.pop();
         _show();
     } else if (isAndroid && options.handleBackWin) {
-        handleBackWin.hide();
+        options.handleBackWin.close();
     }
 };
 
